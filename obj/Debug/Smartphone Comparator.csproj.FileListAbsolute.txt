@@ -1,0 +1,6 @@
+C:\Projects\Smartphone Comparator\Smartphone Comparator\bin\Smartphone Comparator.dll.config
+C:\Projects\Smartphone Comparator\Smartphone Comparator\bin\Smartphone Comparator.dll
+C:\Projects\Smartphone Comparator\Smartphone Comparator\bin\Smartphone Comparator.pdb
+C:\Projects\Smartphone Comparator\Smartphone Comparator\obj\Debug\Smartphone Comparator.dll
+C:\Projects\Smartphone Comparator\Smartphone Comparator\obj\Debug\Smartphone Comparator.pdb
+C:\Projects\Smartphone Comparator\Smartphone Comparator\obj\Debug\Smartphone Comparator.csprojResolveAssemblyReference.cache

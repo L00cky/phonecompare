@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "start": "node server.js"
+  },
+  "main": "server.js",
+  "name": "smartphone_comparator",
+  "version": "1.0.0",
+  "description": "This is a example of two way data binding in angular",
+  "homepage": "index.html",
+  "license": "MIT",
+  "dependencies": {
+    "express": "~4.9.2",
+    "mysql": "~2.5.0",
+    "package": "^1.0.1"
+  }
+}
