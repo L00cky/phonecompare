@@ -30,7 +30,7 @@
                 </li>
                 <li>
                     <a href="#">Manufacturers</a>
-					<div class="manufacturers" ng-repeat="manufacturer in smartphones" ><input type="checkbox" name="filterManufacturer" value="{{ manufacturer.manufacturer }}" ng-model="filterManufacturer">{{ manufacturer.manufacturer }}</div>
+					<div class="manufacturers" ng-repeat="manufacturer in smartphones" ><input type="checkbox" name="{{ manufacturer.manufacturer }}" ng-model="manufacturer.checked" id="{{ manufacturer.manufacturer }}">{{ manufacturer.manufacturer }}</div>
                 </li>
                 <li>
                     <a href="#">Shortcuts</a>
@@ -57,7 +57,7 @@
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sx-12 col-sm-4 col-lg-2" ng-repeat="smartphone in smartphones | filter:filterManufacturer">
+                    <div class="col-sx-12 col-sm-4 col-lg-2" ng-repeat="smartphone in smartphones | filter:['checked', 'manufacturer']">
                         <div class="thumbnail">
                             <img src='{{smartphone.img}}'>
                             <div class="caption">
