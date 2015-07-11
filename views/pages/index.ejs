@@ -57,7 +57,7 @@
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sx-12 col-sm-4 col-lg-2" ng-repeat="smartphone in smartphones | manufacturer">
+                    <div class="col-sx-12 col-sm-4 col-lg-2" ng-repeat="smartphone in smartphones | filter:manufacturer">
                         <div class="thumbnail">
                             <img src='{{smartphone.img}}'>
                             <div class="caption">
