@@ -30,7 +30,9 @@
                 </li>
                 <li>
                     <label>Manufacturers</label>
-                        <input type="text" ng-model="manufacturer.manufacturer"/>
+                    <div class="manufacturer" ng-repeat="manufacturer in smartphones">
+                        <input type="checkbox" ng-model="manufacturer.manufacturer" ng-true-value="{{manufacturer.manufacturer}}" />
+                    </div>
                 </li>
                 <li>
                     <a href="#">Shortcuts</a>
