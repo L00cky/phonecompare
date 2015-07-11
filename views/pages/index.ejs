@@ -30,8 +30,12 @@
                 </li>
                 <li>
                     <label>Manufacturers</label>
-                    <div class="manufacturer" ng-repeat="manufacturer in smartphones">
-                        <input type="checkbox" ng-model="manufacturer.manufacturer" ng-true-value="{{manufacturer.manufacturer}}" />
+                    <div ng-repeat="smartphone in smartphones">
+                        <input type="checkbox" ng-model="smartphones.manufacturer" ng-true-value="{{manufacturer.manufacturer}}" ng-false-value=""/><br />
+                        Checkbox value: {{smartphones.manufacturer}}<br />
+                        <br />
+                        <input ng-model="smartphones.manufacturer" /><br />
+                        Input value: {{smartphones.manufacturer}}
                     </div>
                 </li>
                 <li>
@@ -59,7 +63,7 @@
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sx-12 col-sm-4 col-lg-2" ng-repeat="smartphone in smartphones | filter:manufacturer">
+                    <div class="col-sx-12 col-sm-4 col-lg-2" ng-repeat="smartphone in smartphones">
                         <div class="thumbnail">
                             <img src='{{smartphone.img}}'>
                             <div class="caption">
