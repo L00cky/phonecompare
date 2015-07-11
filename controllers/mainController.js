@@ -1,6 +1,6 @@
 ﻿var app = angular.module("myApp", []);
 
-app.controller('PhoneListCtrl', function ($scope, $http) {
+app.controller('PhoneListCtrl', function ($scope, $https) {
     load_smartphones();
 
     function load_smartphones(){
