@@ -31,15 +31,12 @@ app.use("/controllers", express.static(__dirname + '/controllers'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-app.get('/', function (request, response) {
+app.get('/', function(request, response) {
     response.render('pages/index');
 });
 
 app.get('/load', function (req, res) {
-    connection.query({
-        sql: 'SELECT * FROM `smartphones`',
-        timeout: 40000
-    }, function (error, results, fields) {
+    connection.query("SELECT * from smartphones", function (err, rows) {
         if (err) {
             console.log("Problem with MySQL" + err);
         }
@@ -49,6 +46,6 @@ app.get('/load', function (req, res) {
     });
 });
 
-app.listen(app.get('port'), function () {
-    console.log('Node app is running on port: ', app.get('port'));
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port: ', app.get('port'));
 });
