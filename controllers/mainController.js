@@ -28,5 +28,4 @@ app.controller('PhoneListCtrl', function ($scope, $http) {
         
         return manufacturer;
     }
-}
 });
