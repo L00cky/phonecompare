@@ -1,5 +1,5 @@
 {
-  "name": "Smartphone comparator",
+  "name": "smartphone-comparator",
   "version": "0.1.4",
   "description": "A sample Node.js app using Express 4",
   "main": "index.js",

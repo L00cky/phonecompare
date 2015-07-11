@@ -1,5 +1,5 @@
 {
-  "name": "Smarphone comparator",
+  "name": "smartphone-comparator",
   "description": "App using Nodejs for comparing phones",
   "repository": "https://github.com/L00cky/phonecompare.git",
   "keywords": ["node", "express", "compare", "smartphones", "phones", "mobile"]
