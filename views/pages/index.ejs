@@ -21,7 +21,7 @@
 
     <div id="wrapper">
         <!-- Sidebar -->
-        <div id="sidebar-wrapper">
+        <div id="sidebar-wrapper" class="col-xs-0 col-sm-2 colcol-lg-2">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">
@@ -48,7 +48,7 @@
                     <a href="#">Services</a>
                 </li>
                 <li>
-                    <p>Test{{1+1}}</p>
+                    <p>Test: {{1+1}}</p>
                 </li>
             </ul>
         </div>
@@ -57,7 +57,7 @@
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-2" ng-repeat="smartphone in smartphones | filter:filterManufacturer">
+                    <div class="col-sx-12 col-sm-10 col-lg-2" ng-repeat="smartphone in smartphones | filter:filterManufacturer">
                         <div class="thumbnail">
                             <img src="{{smartphone.img}}">
                             <div class="caption">
