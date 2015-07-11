@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{00000000-0000-0000-0000-000000000000}</ProjectGuid>
+    <ProjectGuid>{A1B95496-92C6-432B-8421-DB1C9430ADC6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <NoStandardLibraries>false</NoStandardLibraries>
     <AssemblyName>ClassLibrary</AssemblyName>
@@ -27,6 +27,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>phonecompare</RootNamespace>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -35,6 +38,30 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="controllers\mainController.js" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\styles.css" />
+    <Content Include="index.js" />
+    <Content Include="js\angular.intellisense.js" />
+    <Content Include="js\angular.js" />
+    <Content Include="js\angular.min.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\scripts.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.json" />
+    <None Include="js\angular.min.js.map" />
+    <None Include="package.json" />
+    <None Include="README.md" />
+    <None Include="views\pages\index.ejs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\" />
+    <Folder Include=".vs\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
   <ProjectExtensions>

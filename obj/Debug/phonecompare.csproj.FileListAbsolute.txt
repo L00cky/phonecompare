@@ -1,0 +1,5 @@
+C:\Projects\phonecompare\bin\Debug\ClassLibrary.dll
+C:\Projects\phonecompare\bin\Debug\ClassLibrary.pdb
+C:\Projects\phonecompare\obj\Debug\phonecompare.csprojResolveAssemblyReference.cache
+C:\Projects\phonecompare\obj\Debug\ClassLibrary.dll
+C:\Projects\phonecompare\obj\Debug\ClassLibrary.pdb
