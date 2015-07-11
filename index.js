@@ -46,6 +46,26 @@ app.get('/load', function (req, res) {
     });
 });
 
+function handleDisconnect(conn) {
+    conn.on('error', function (err) {
+        if (!err.fatal) {
+            return;
+        }
+
+        if (err.code !== 'PROTOCOL_CONNECTION_LOST') {
+            throw err;
+        }
+
+        console.log('Re-connecting lost connection: ' + err.stack);
+
+        connection = mysql.createConnection(conn.config);
+        handleDisconnect(connection);
+        connection.connect();
+    });
+}
+
+handleDisconnect(connection);
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port: ', app.get('port'));
 });
