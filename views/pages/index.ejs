@@ -30,7 +30,7 @@
                 </li>
                 <li>
                     <a href="#">Manufacturers</a>
-					<div class="manufacturers" ng-repeat="manufacturer in smartphones" ><input type="checkbox" value="{{ manufacturer.manufacturer }}" ng-model="filterManufacturer">{{ manufacturer.manufacturer }}</div>
+					<div class="manufacturers" ng-repeat="manufacturer in smartphones" ><input type="checkbox" name="filterManufacturer" value="{{ manufacturer.manufacturer }}" ng-model="filterManufacturer">{{ manufacturer.manufacturer }}</div>
                 </li>
                 <li>
                     <a href="#">Shortcuts</a>
