@@ -31,8 +31,7 @@
                 <li>
                     <label>Manufacturers</label>
                     <div ng-repeat="smartphone in smartphones">
-                        <input type="checkbox" ng-model="filterby.manufacturer" ng-true-value="{{manufacturer.manufacturer}}" ng-false-value=""/><br />
-                        Checkbox value: {{filterby.manufacturer}}<br />
+                        <input type="checkbox" data-ng-model='search.type1' data-ng-true-value='{{smartphone.manufacturer}}' data-ng-false-value='' />
                     </div>
                 </li>
                 <li>
@@ -60,7 +59,7 @@
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sx-12 col-sm-4 col-lg-2" ng-repeat="smartphone in smartphones">
+                    <div class="col-sx-12 col-sm-4 col-lg-2" ng-repeat="smartphone in smartphones | search.type1">
                         <div class="thumbnail">
                             <img src='{{smartphone.img}}'>
                             <div class="caption">
