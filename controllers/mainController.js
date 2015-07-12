@@ -5,6 +5,7 @@ app.controller('PhoneListCtrl', function ($scope, $http) {
 
     function load_smartphones(){
         $http.get('https://phone-compare.herokuapp.com/load_smartphones').success(function (data) {
+            $scope.search = [];
             $scope.smartphones=data;
         });
     };
