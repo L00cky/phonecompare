@@ -30,9 +30,9 @@
                 </li>
                 <li>
                     <label>Manufacturers</label>
-                    <div class="manufacturers_filter" data-ng-repeat="manufacturer in manufacturers">
+                    <span class="manufacturers_filter" data-ng-repeat="manufacturer in manufacturers">
                         <input type="checkbox" data-ng-model='search.manufacturer' data-ng-true-value="'{{manufacturer.manufacturer}}'" data-ng-false-value='' /> {{manufacturer.manufacturer}}
-                    </div>
+                    </span>
                 </li>
                 <li>
                     <a href="#">Shortcuts</a>
