@@ -57,6 +57,17 @@ app.get('/load_manufacturers', function (req, res) {
     });
 });
 
+app.get('/load_resolutions', function (req, res) {
+    connection.query("SELECT * from resolutions", function (err, rows) {
+        if (err) {
+            console.log("Problem with MySQL" + err);
+        }
+        else {
+            res.end(JSON.stringify(rows));
+        }
+    });
+});
+
 function handleDisconnect(conn) {
     conn.on('error', function (err) {
         if (!err.fatal) {

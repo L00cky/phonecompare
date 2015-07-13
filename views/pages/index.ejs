@@ -15,13 +15,13 @@
 <body data-ng-controller="PhoneListCtrl">
     <!-- top navbar -->
     <div id="fixed-header">
-        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Show filters</a>
+        <h3>Phone comparator</h3>
     </div>
 
     <div id="wrapper">
         <!-- Sidebar -->
-        <div id="sidebar-wrapper" class="col-xs-0 col-sm-4 colcol-lg-2">
-            <div class="panel-group container-fluid" id="accordion" role="tablist" aria-multiselectable="true">
+        <div id="sidebar-wrapper">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="headingOne">
                         <h4 class="panel-title">
@@ -40,6 +40,24 @@
                         </div>
                     </div>
                 </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <label>Resolutions</label><span class="badge"> {{ resolutions.length }}</span><br />
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <div class="resolutions_filter row">
+                                <div class="col-lg-6" data-ng-repeat="resolution in resolutions">
+                                    <input type="checkbox" data-ng-model='search.resolution' data-ng-true-value="'{{resolution.screen_resolution}}'" data-ng-false-value='' /> {{resolution.screen_resolution}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -47,7 +65,7 @@
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sx-12 col-sm-4 col-lg-2" data-ng-repeat="smartphone in smartphones | filter:search.manufacturer">
+                    <div class="col-sx-2 col-sm-4 col-md-3 col-lg-2" data-ng-repeat="smartphone in smartphones | filter:search.manufacturer | filter:search.resolution">
                         <div class="thumbnail">
                             <img ng-src='{{smartphone.img}}'>
                             <div class="caption">
@@ -64,8 +82,9 @@
     <!-- /#wrapper -->
     <!--footer-->
     <footer class="navbar navbar-default navbar-fixed-bottom">
-        <div class="container-fluid">
+        <div class="container-fluid">            
             <div class="row">
+                <button type="button" href="#menu-toggle" class="btn btn-default" id="menu-toggle">Show filters</button>
                 <ul class="list-unstyled text-right">
                     <li class="col-sm-4 col-xs-6">
                         <a href="#">About</a>
@@ -75,21 +94,6 @@
                     </li>
                     <li class="col-sm-4 col-xs-6">
                         <a href="#">Studies</a>
-                    </li>
-                    <li class="col-sm-4 col-xs-6">
-                        <a href="#">References</a>
-                    </li>
-                    <li class="col-sm-4 col-xs-6">
-                        <a href="#">Login</a>
-                    </li>
-                    <li class="col-sm-4 col-xs-6">
-                        <a href="#">Press</a>
-                    </li>
-                    <li class="col-sm-4 col-xs-6">
-                        <a href="#">Contact</a>
-                    </li>
-                    <li class="col-sm-4 col-xs-6">
-                        <a href="#">Impressum</a>
                     </li>
                 </ul>
             </div><!--/row-->
@@ -102,7 +106,7 @@
     <script src="js/scripts.js"></script>
     <script src="js/angular.js"></script>
     <script src="controllers/mainController.js"></script>
-    <!--<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>-->
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
     <script>
         $("#menu-toggle").click(function (e) {
             e.preventDefault();
