@@ -23,21 +23,21 @@
         <div id="sidebar-wrapper" class="col-xs-0 col-sm-4 colcol-lg-2">
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="manufacturers">
+                    <div class="panel-heading" role="tab" id="headingOne">
                         <h4 class="panel-title">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#manufacturers" aria-expanded="true" aria-controls="manufacturers">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 <label>Manufacturers</label><span class="badge"> {{manufacturers.length}}</span><br />
                             </a>
                         </h4>
                     </div>
-                    <div id="manufacturers" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="manufacturers">
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                         <div class="panel-body">
                             <span class="manufacturers_filter" data-ng-repeat="manufacturer in manufacturers">
                                 <input type="checkbox" data-ng-model='search.manufacturer' data-ng-true-value="'{{manufacturer.manufacturer}}'" data-ng-false-value='' /> {{manufacturer.manufacturer}}
                             </span>
                         </div>
                     </div>
-                </div>                
+                </div>
             </div>
         </div>
         <!-- /#sidebar-wrapper -->
