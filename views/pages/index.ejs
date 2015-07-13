@@ -32,8 +32,8 @@
                     </div>
                     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                         <div class="panel-body">
-                            <div class="manufacturers_filter row" data-ng-repeat="manufacturer in manufacturers">
-                                <div class="col-lg-6">
+                            <div class="manufacturers_filter row">
+                                <div class="col-lg-6"  data-ng-repeat="manufacturer in manufacturers">
                                     <input type="checkbox" data-ng-model='search.manufacturer' data-ng-true-value="'{{manufacturer.manufacturer}}'" data-ng-false-value='' /> {{manufacturer.manufacturer}}
                                 </div>
                             </div>
