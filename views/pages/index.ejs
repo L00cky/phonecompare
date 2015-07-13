@@ -25,7 +25,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="headingOne">
                         <h4 class="panel-title">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                 <label>Manufacturers</label><span class="badge"> {{ manufacturers.length }}</span><br />
                             </a>
                         </h4>
@@ -33,7 +33,7 @@
                     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                         <div class="panel-body">
                             <div class="manufacturers_filter row">
-                                <div class="col-lg-6"  data-ng-repeat="manufacturer in manufacturers">
+                                <div class="col-lg-6" data-ng-repeat="manufacturer in manufacturers">
                                     <input type="checkbox" data-ng-model='search.manufacturer' data-ng-true-value="'{{manufacturer.manufacturer}}'" data-ng-false-value='' /> {{manufacturer.manufacturer}}
                                 </div>
                             </div>
@@ -43,16 +43,27 @@
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="headingTwo">
                         <h4 class="panel-title">
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                <label>Resolutions</label><span class="badge"> {{ resolutions.length }}</span><br />
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                <label>Display</label><br />
                             </a>
                         </h4>
                     </div>
                     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                         <div class="panel-body">
-                            <div class="resolutions_filter row">
-                                <div class="col-lg-6" data-ng-repeat="resolution in resolutions">
-                                    <input type="checkbox" data-ng-model='search.resolution' data-ng-true-value="'{{resolution.screen_resolution}}'" data-ng-false-value='' /> {{resolution.screen_resolution}}
+                            <div class="wrap-display">
+                                <div class="resolutions_filter row">
+                                    <div class="resolutions">
+                                        <label>Resolution</label><br />
+                                        <div class="col-lg-6" data-ng-repeat="resolution in resolutions">
+                                            <input type="checkbox" data-ng-model='search.resolution' data-ng-true-value="'{{resolution.screen_resolution}}'" data-ng-false-value='' /> {{resolution.screen_resolution}}
+                                        </div>
+                                    </div>
+                                    <div class="screens">
+                                        <label>Screen Size</label><br />
+                                        <div class="col-lg-6" data-ng-repeat="screen in screens">
+                                            <input type="checkbox" data-ng-model='search.screen' data-ng-true-value="'{{screen.screen_size}}'" data-ng-false-value='' /> {{screen.screen_size}}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -65,7 +76,7 @@
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sx-2 col-sm-4 col-md-3 col-lg-2" data-ng-repeat="smartphone in smartphones | filter:search.manufacturer | filter:search.resolution">
+                    <div class="col-sx-2 col-sm-4 col-md-3 col-lg-2" data-ng-repeat="smartphone in smartphones | filter:search.manufacturer | filter:search.resolution | filter:search.screen">
                         <div class="thumbnail">
                             <img ng-src='{{smartphone.img}}'>
                             <div class="caption">
@@ -82,7 +93,7 @@
     <!-- /#wrapper -->
     <!--footer-->
     <footer class="navbar navbar-default navbar-fixed-bottom">
-        <div class="container-fluid">            
+        <div class="container-fluid">
             <div class="row">
                 <button type="button" href="#menu-toggle" class="btn btn-default" id="menu-toggle">Show filters</button>
                 <ul class="list-unstyled text-right">
