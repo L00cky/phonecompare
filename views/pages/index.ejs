@@ -24,33 +24,13 @@
         <div id="sidebar-wrapper" class="col-xs-0 col-sm-4 colcol-lg-2">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="#">
-                        Filters
-                    </a>
+                    <span class="glyphicon glyphicon-filter" aria-hidden="true"></span> Filters
                 </li>
                 <li>
                     <label>Manufacturers</label><span class="badge"> {{manufacturers.length}}</span><br />
                     <span class="manufacturers_filter" data-ng-repeat="manufacturer in manufacturers">
                         <input type="checkbox" data-ng-model='search.manufacturer' data-ng-true-value="'{{manufacturer.manufacturer}}'" data-ng-false-value='' /> {{manufacturer.manufacturer}}
                     </span>
-                </li>
-                <li>
-                    <a href="#">Shortcuts</a>
-                </li>
-                <li>
-                    <a href="#">Overview</a>
-                </li>
-                <li>
-                    <a href="#">Events</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <p>Test: {{1+1}}</p>
                 </li>
             </ul>
         </div>
