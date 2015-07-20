@@ -22,6 +22,7 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <!-- Manufacturer -->
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="headingOne">
                         <h4 class="panel-title">
@@ -40,6 +41,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Display -->
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="headingTwo">
                         <h4 class="panel-title">
@@ -52,12 +54,14 @@
                         <div class="panel-body">
                             <div class="wrap-display">
                                 <div class="resolutions_filter row">
+                                    <!-- Resolution -->
                                     <div class="resolutions">
                                         <label>Resolution</label><br />
                                         <div class="col-lg-6" data-ng-repeat="resolution in resolutions">
                                             <input type="checkbox" data-ng-model='search.resolution' data-ng-true-value="'{{resolution.screen_resolution}}'" data-ng-false-value='' /> {{resolution.screen_resolution}}
                                         </div>
-                                    </div>
+                                    </div><br />
+                                    <!-- Screen Size -->
                                     <div class="screens">
                                         <label>Screen Size</label><br />
                                         <div class="col-lg-6" data-ng-repeat="screen in screens">
@@ -66,6 +70,21 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Price -->
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                <label>Price</label><br />
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            Tahlo
                         </div>
                     </div>
                 </div>

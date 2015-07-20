@@ -167,6 +167,14 @@ footer > .container {
     min-height:80px;
 }
 
+.wrap-display{
+    display:block;
+}
+
+.resolutions{
+    margin-bottom:30px;
+}
+
 /* theme */
 .btn,.form-control,.alert,.progress,.panel,.list-group,.well,.list-group-item:first-child {border-radius:1px;box-shadow:0 0 0;}
 .btn {border-color:transparent;}
