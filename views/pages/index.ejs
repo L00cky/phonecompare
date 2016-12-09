@@ -15,7 +15,7 @@
 <body data-ng-controller="PhoneListCtrl">
     <!-- top navbar -->
     <div id="fixed-header">
-        <h3>Phone comparator</h3>
+        <h3>Phone comparer</h3>
     </div>
 
     <div id="wrapper">
@@ -95,7 +95,8 @@
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sx-2 col-sm-4 col-md-3 col-lg-2" data-ng-repeat="smartphone in smartphones | filter:search.manufacturer | filter:search.resolution | filter:search.screen">
+                    <div class="col-sx-2 col-sm-4 col-md-3 col-lg-2" data-ng-repeat="smart
+                    in smartphones | filter:search.manufacturer | filter:search.resolution | filter:search.screen">
                         <div class="thumbnail">
                             <img ng-src='{{smartphone.img}}'>
                             <div class="caption">
